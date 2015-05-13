@@ -1,0 +1,6 @@
+# This file is part of the brickpi-systemd package
+
+# start BrickPi line discipline on Raspberry Pi serial port
+SUBSYSTEMS=="tty", KERNEL=="ttyAMA0", TAG+="systemd", \
+    ENV{SYSTEMD_WANTS}="brickpi@$kernel.service", \
+    ENV{SYSTEMD_ALIAS}="$devnode"

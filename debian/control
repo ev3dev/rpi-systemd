@@ -1,0 +1,17 @@
+Source: brickpi-systemd
+Priority: optional
+Maintainer: David Lechner <david@lechnology.com>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.5
+Section: kernel
+Homepage: http://www.ev3dev.org
+Vcs-Git: git://github.com/ev3dev/brickpi-systemd.git
+Vcs-Browser: https://github.com/ev3dev/brickpi-systemd
+
+Package: brickpi-systemd
+Section: embedded
+Architecture: all
+Depends: ${misc:Depends}, systemd
+Description: Udev rule and systemd service for BrickPi.
+ Provides a udev rule and systemd service for automatically connecting the
+ BrickPi line discipline on Raspberry Pi hardware.

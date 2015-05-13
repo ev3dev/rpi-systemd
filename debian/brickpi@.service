@@ -1,0 +1,9 @@
+# This file is part of the brickpi-systemd package
+
+[Unit]
+Description=BrickPi Line Discipline
+BindsTo=dev-%i.device
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/ldattach -d 28 /dev/%I
