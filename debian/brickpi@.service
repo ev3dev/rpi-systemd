@@ -5,5 +5,5 @@ Description=BrickPi Line Discipline
 BindsTo=dev-%i.device
 
 [Service]
-Type=simple
-ExecStart=/usr/sbin/ldattach -d 28 /dev/%I
+Type=forking
+ExecStart=/usr/sbin/ldattach 28 /dev/%I
