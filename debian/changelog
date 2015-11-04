@@ -1,3 +1,9 @@
+brickpi-systemd (3) stable; urgency=medium
+
+  * Add custom device-tree property check to udev rule.
+
+ -- David Lechner <david@lechnology.com>  Tue, 03 Nov 2015 21:55:09 -0600
+
 brickpi-systemd (2) stable; urgency=medium
 
   * Change brickpi@.service to forking.
