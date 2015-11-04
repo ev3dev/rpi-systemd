@@ -1,6 +1,8 @@
 # This file is part of the brickpi-systemd package
 
-# start BrickPi line discipline on Raspberry Pi serial port
+# Start BrickPi line discipline on Raspberry Pi serial port if BrickPi is
+# attached (indicated by custom device-tree property)
 SUBSYSTEMS=="tty", KERNEL=="ttyAMA0", TAG+="systemd", \
+    ATTR{device/of_node/brickpi,status}=="okay", \
     ENV{SYSTEMD_WANTS}="brickpi@$kernel.service", \
     ENV{SYSTEMD_ALIAS}="$devnode"
