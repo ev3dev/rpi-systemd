@@ -13,4 +13,4 @@
 	dh $@
 
 override_dh_installudev:
-	dh_installudev --name=brickpi
+	dh_installudev --name=rpi
