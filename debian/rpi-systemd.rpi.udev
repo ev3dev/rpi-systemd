@@ -9,3 +9,8 @@ SUBSYSTEMS=="tty", KERNEL=="ttyAMA0", TAG+="systemd", \
 
 # Load modules for Adafruit 2.8" Resistive Touchscreen.
 ENV{MODALIAS}=="spi:stmpe610", RUN{builtin}+="kmod load stmpe_ts gpio_backlight"
+
+# RPi 3 Bluetooth
+SUBSYSTEM=="tty", ATTRS{of_node/rpi3,bluetooth}=="okay", TAG+="systemd", \
+    ENV{SYSTEMD_WANTS}="rpi3-bluetooth@$kernel.service", \
+    ENV{SYSTEMD_ALIAS}="$devnode"

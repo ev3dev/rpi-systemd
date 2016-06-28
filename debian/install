@@ -1,1 +1,2 @@
 debian/brickpi@.service /lib/systemd/system
+debian/rpi3-bluetooth@.service /lib/systemd/system

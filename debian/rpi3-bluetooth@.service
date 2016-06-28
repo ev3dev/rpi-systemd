@@ -1,0 +1,10 @@
+# This file is part of the rpi-systemd package
+
+[Unit]
+Description=Broadcom BCM43438 bluetooth HCI
+Before=bluetooth.service
+BindsTo=dev-%i.device
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/hciattach /dev/%i bcm43xx 921600 noflow -
