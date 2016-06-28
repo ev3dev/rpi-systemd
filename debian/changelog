@@ -1,3 +1,11 @@
+rpi-systemd (4) stable; urgency=medium
+
+  * Add udev rule for Adafruit 2.8" Resistive Touchscreen
+  * Rename package to rpi-systemd
+  * Add RPi3 bluetooth udev rule and systemd service
+
+ -- David Lechner <david@lechnology.com>  Mon, 27 Jun 2016 23:06:15 -0500
+
 brickpi-systemd (3) stable; urgency=medium
 
   * Add custom device-tree property check to udev rule.
