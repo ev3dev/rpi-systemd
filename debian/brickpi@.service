@@ -1,9 +1,0 @@
-# This file is part of the rpi-systemd package
-
-[Unit]
-Description=BrickPi Line Discipline
-BindsTo=dev-%i.device
-
-[Service]
-Type=forking
-ExecStart=/usr/sbin/ldattach 28 /dev/%I

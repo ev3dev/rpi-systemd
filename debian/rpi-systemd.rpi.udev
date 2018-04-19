@@ -1,12 +1,5 @@
 # This file is part of the rpi-systemd package
 
-# Start BrickPi line discipline on Raspberry Pi serial port if BrickPi is
-# attached (indicated by custom device-tree property)
-SUBSYSTEMS=="tty", KERNEL=="ttyAMA0", TAG+="systemd", \
-    ATTR{device/of_node/brickpi,status}=="okay", \
-    ENV{SYSTEMD_WANTS}="brickpi@$kernel.service", \
-    ENV{SYSTEMD_ALIAS}="$devnode"
-
 # Load modules for Adafruit 2.8" Resistive Touchscreen.
 ENV{MODALIAS}=="spi:stmpe610", RUN{builtin}+="kmod load stmpe_ts gpio_backlight"
 
